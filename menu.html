@@ -378,18 +378,15 @@
         const input = document.getElementById('combo-input');
         const list = document.getElementById('list');
 
-        // Toggle dropdown when clicking the box
         combo.addEventListener('click', (e) => {
             e.stopPropagation();
             combo.classList.toggle('active');
         });
 
-        // Select item and close
         list.addEventListener('click', (e) => {
             if (e.target.tagName === 'LI') {
                 input.value = e.target.textContent;
                 let id = e.target.attributes['data-id']?.value;
-                // You can also add custom logic here, like filtering the gallery!
                 let gallery = document.querySelector('.product-grid');
 
                 gallery.innerHTML = '';
@@ -405,7 +402,6 @@
             }
         });
 
-        // Close when clicking anywhere else on the screen
         document.addEventListener('click', () => {
             combo.classList.remove('active');
         });
@@ -419,13 +415,6 @@
     <span class="price">${f.price}</span>
 </div>\n`;
         })
-
-        /* <div class="card">
-                        <div class="card-img-placeholder"></div>
-                        <h3>Cheeseburger Classic</h3>
-                        <p>Carne proaspătă, brânză cheddar, salată, roșii, castraveți</p>
-                        <span class="price">45 MDL</span>
-                    </div>*/
     </script>
 </body>
 
