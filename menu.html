@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Denis - Meniul Zilei</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Oswald:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="/">
+                    <img src="chefdenis.png" alt="chef denis">
+                </a>
+            </div>
+            <div class="header-btns">
+                <a href="/">Acasa</a>
+                <a href="/despre-noi.html">Despre noi</a>
+                <a href="#" class="active">Meniu</a>
+                <a href="/contact.html">Contacte</a>
+                <a href="call:+37369696969">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.26334 12.3607C8.47286 11.2166 8.00262 9.83629 7.9056 9.71902C9.06334 8.91188 11.3276 7.8976 11.4544 6.44224C11.6157 4.56188 8.43 0.630929 7.81929 0.595215C6.14786 0.613072 3.08893 3.44164 2.72643 4.29641C2.05262 6.06367 2.38655 7.70831 3.54488 10.0893C5.01988 13.6309 10.4985 20.3494 13.6324 22.4583C15.7062 24.05 17.2211 24.675 19.03 24.2976C19.8711 24.1381 22.9086 21.6458 23.2127 19.9607C23.2871 19.3357 19.7562 15.1922 17.93 15.028C16.5121 14.897 15.1526 17.0196 14.1782 18.0571C14.0812 17.9333 13.2502 17.2851 12.3586 16.2589C11.1979 15.0393 10.1193 13.6065 9.26334 12.3607Z"
+                            fill="white" />
+                    </svg>
+                    0611 44 412
+                </a>
+            </div>
+            <div class="mobile-menu">
+                <svg id="mobile-menu-btn" width="64px" height="64px" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g id="Menu / Hamburger_MD">
+                            <path id="Vector" d="M5 17H19M5 12H19M5 7H19" stroke="#fff" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay">
+        <a class="close-menu">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                        fill="#fff"></path>
+                </g>
+            </svg>
+            Back
+        </a>
+        <a href="/">Acasa</a>
+        <a href="/despre-noi.html">Despre noi</a>
+        <a href="#" class="active">Meniu</a>
+        <a href="/contact.html">Contacte</a>
+        <a href="call:+37369696969">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M9.26334 12.3607C8.47286 11.2166 8.00262 9.83629 7.9056 9.71902C9.06334 8.91188 11.3276 7.8976 11.4544 6.44224C11.6157 4.56188 8.43 0.630929 7.81929 0.595215C6.14786 0.613072 3.08893 3.44164 2.72643 4.29641C2.05262 6.06367 2.38655 7.70831 3.54488 10.0893C5.01988 13.6309 10.4985 20.3494 13.6324 22.4583C15.7062 24.05 17.2211 24.675 19.03 24.2976C19.8711 24.1381 22.9086 21.6458 23.2127 19.9607C23.2871 19.3357 19.7562 15.1922 17.93 15.028C16.5121 14.897 15.1526 17.0196 14.1782 18.0571C14.0812 17.9333 13.2502 17.2851 12.3586 16.2589C11.1979 15.0393 10.1193 13.6065 9.26334 12.3607Z"
+                    fill="white" />
+            </svg>
+            0611 44 412
+        </a>
+    </div>
+
+    <main>
+        <section class="menu-section">
+            <div class="container">
+                <h1 class="section-title">Meniul Zilei</h1>
+                <p class="section-subtitle">Gustoasă, Rapidă, Sănătoasă</p>
+
+                <div class="custom-combo" id="combo-container">
+                    <div class="input-wrapper">
+                        <input type="text" id="combo-input" placeholder="Select an option..." readonly value="Toate">
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="options-list" id="list">
+                        <li data-id="-">Toate</li>
+                        <li data-id="gustari">Gustări</li>
+                        <li data-id="combo">Combo</li>
+                        <li data-id="bauturi">Băuturi fierbinți</li>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="offer-section">
+            <div class="container">
+                <div class="offer-box">
+                    <h2>Ofertă nouă</h2>
+                    <p class="offer-main">Orice burger + Cartofi + Băutură = 70 MDL</p>
+                    <p class="offer-sub">Valabil doar Sâmbătă și Duminică</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container features-container">
+                <div class="features-list">
+                    <h2 class="features-title">De ce Chef Denis?</h2>
+
+                    <div class="feature-item">
+                        <div class="icon-circle"><i class="fa-solid fa-check"></i></div>
+                        <div class="feature-text">
+                            <h4>100% Ingrediente Proaspete</h4>
+                            <p>Gătim zilnic cu ingrediente de calitate</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-circle"><i class="fa-solid fa-check"></i></div>
+                        <div class="feature-text">
+                            <h4>Pregătire Rapidă</h4>
+                            <p>Comanda ta gata în 5 minute</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-circle"><i class="fa-solid fa-check"></i></div>
+                        <div class="feature-text">
+                            <h4>Opțiuni Sănătoase</h4>
+                            <p>Alternative vegetariene și low-carb</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-art">
+                    <span class="art-text t1">GUSTOS</span>
+                    <span class="art-text t2">ZILNIC</span>
+                    <span class="art-text t3">FRESH</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Feedback</h4>
+                <a href="/contact.html#recenzii">Recenzii</a>
+                <a href="/contact.html#faq">Întrebări frecvente</a>
+            </div>
+            <div class="footer-col">
+                <h4><i class="far fa-clock"></i> Program</h4>
+                <div class="schedule-row">
+                    <span>Weekend</span>
+                    <span>8:00-18:00</span>
+                </div>
+                <div class="schedule-row">
+                    <span>Luni - Vineri</span>
+                    <span>7:30-19:00</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Companie</h4>
+                <a href="/despre-noi.html#locatii">Locații</a>
+                <a href="/despre-noi.html">Despre noi</a>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>Contacte</h4>
+                <div class="socials">
+                    <i class="fab fa-tiktok"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <p>chefdeniskitchen@gmail.com</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy;2026 Chef Denis Kitchen. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Politica de confidențialitate</a>
+                <a href="#">Termeni și condiții</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+
+        var producte = [
+            {
+                type: 'gustari',
+                img: '/producte/cheeseburger-cu-pui.png',
+                name: 'Cheeseburger cu pui',
+                desc: 'Salată verde proaspătă, felii fine de cașcaval',
+                price: '55 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/bagheta.png',
+                name: 'Baghetă',
+                desc: 'Șuncă de curcan cu salată verde',
+                price: '35 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/crenvusti.png',
+                name: 'Crenvuști foietaj',
+                desc: 'Carne proaspătă, brânză cheddar',
+                price: '40 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/khachapuri.png',
+                name: 'Khachapuri  fierbinte',
+                desc: 'Brânză topită și cremoasă',
+                price: '45 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/ciabatta.png',
+                name: 'Ciabatta',
+                desc: 'Cereale și salami italian',
+                price: '35 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/wrap-de-pui-salsa.png',
+                name: 'Wrap de pui cu sos salsa',
+                desc: 'Pui crocant, legume proaspete, salsa',
+                price: '60 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/croissant.png',
+                name: 'Croissant cu ciocolată',
+                desc: 'Aluat foietaj cu zahăr umplut cu ciocolată.',
+                price: '30 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/salata-caesar.png',
+                name: 'Salată caesar',
+                desc: 'Pui fript, crutoane și parmezan.',
+                price: '50 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/bagheta-cu-rulada-pui.png',
+                name: 'Bagheta cu rulada de pui',
+                desc: 'Ruladă pui, roșii, salată verde',
+                price: '40 MDL'
+            },
+            {
+                type: 'gustari',
+                img: '/producte/bagheta-cu-salam.png',
+                name: 'Bagheta cu salami, sos picant',
+                desc: 'Salam felii, sos ardei iute',
+                price: '40 MDL'
+            },
+            {
+                type: 'combo',
+                img: '/producte/crenvusti-caf.png',
+                name: 'Crenvurști + Cafea',
+                desc: 'Crenvuști foietaj cu cafea la alegere.',
+                price: '60 MDL'
+            },
+            {
+                type: 'combo',
+                img: '/producte/soda-croissant.png',
+                name: 'Soda + Croissant',
+                desc: 'Croissant cu ciocolată și băutură răcoritoare',
+                price: '45 MDL'
+            },
+            {
+                type: 'combo',
+                img: '/producte/lamaie-sandwich.png',
+                name: 'Soda cu Lămâie + Sandwich',
+                desc: 'Sandwich cu mix de carne și cașcaval.',
+                price: '100 MDL'
+            },
+            {
+                type: 'combo',
+                img: '/producte/capucc-toast.png',
+                name: 'Cappuccino + Toast cu Ricotta',
+                desc: 'Brânză ricotta cremoasă pe pâine',
+                price: '80 MDL'
+            },
+            {
+                type: 'combo',
+                img: '/producte/croissant-cafea.png',
+                name: 'Croissant + Cafea',
+                desc: 'Croissant cu cafea',
+                price: '35 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/apa-dorna.png',
+                name: 'Apă Dorna',
+                desc: '',
+                price: '12 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/sprite.png',
+                name: 'Sprite',
+                desc: '',
+                price: '20 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/coca-cola.png',
+                name: 'Coca-Cola',
+                desc: '',
+                price: '20 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/fanta.png',
+                name: 'Fanta',
+                desc: '',
+                price: '20 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/limonada.png',
+                name: 'Limonadă',
+                desc: '',
+                price: '40 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/bautura.png',
+                name: 'Espresso / Americano',
+                desc: '',
+                price: '25 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/bautura.png',
+                name: 'Cappucino',
+                desc: '',
+                price: '27 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/bautura.png',
+                name: 'Latte',
+                desc: '',
+                price: '30 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/ceai.png',
+                name: 'Ceai în sortiment',
+                desc: '',
+                price: '20 MDL'
+            },
+            {
+                type: 'bauturi',
+                img: '/producte/ciocolata-fierbinte.png',
+                name: 'Ciocolată fierbinte',
+                desc: '',
+                price: '25 MDL'
+            }
+        ];
+
+        const combo = document.getElementById('combo-container');
+        const input = document.getElementById('combo-input');
+        const list = document.getElementById('list');
+
+        // Toggle dropdown when clicking the box
+        combo.addEventListener('click', (e) => {
+            e.stopPropagation();
+            combo.classList.toggle('active');
+        });
+
+        // Select item and close
+        list.addEventListener('click', (e) => {
+            if (e.target.tagName === 'LI') {
+                input.value = e.target.textContent;
+                let id = e.target.attributes['data-id']?.value;
+                // You can also add custom logic here, like filtering the gallery!
+                let gallery = document.querySelector('.product-grid');
+
+                gallery.innerHTML = '';
+                let filtered = producte.filter(p => id == '-' ? true : p.type == id);
+                filtered.forEach(f => {
+                    gallery.innerHTML += `<div class="card">
+    <img src="${f.img}" class="card-img">
+    <h3>${f.name}</h3>
+    <p>${f.desc}</p>
+    <span class="price">${f.price}</span>
+</div>\n`;
+                })
+            }
+        });
+
+        // Close when clicking anywhere else on the screen
+        document.addEventListener('click', () => {
+            combo.classList.remove('active');
+        });
+
+        let gallery = document.querySelector('.product-grid');
+        producte.forEach(f => {
+                    gallery.innerHTML += `<div class="card">
+<img src="${f.img}" class="card-img">
+    <h3>${f.name}</h3>
+    <p>${f.desc}</p>
+    <span class="price">${f.price}</span>
+</div>\n`;
+        })
+
+        /* <div class="card">
+                        <div class="card-img-placeholder"></div>
+                        <h3>Cheeseburger Classic</h3>
+                        <p>Carne proaspătă, brânză cheddar, salată, roșii, castraveți</p>
+                        <span class="price">45 MDL</span>
+                    </div>*/
+    </script>
+</body>
+
+</html>

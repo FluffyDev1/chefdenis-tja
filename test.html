@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --border-color: #444;
+            --hover-color: #333;
+        }
+
+        .custom-combo {
+            position: relative;
+            width: 250px;
+            font-family: sans-serif;
+            user-select: none;
+            /* Prevents text highlighting on click */
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            background: #1a1a1a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 5px 15px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .input-wrapper:hover {
+            border-color: #666;
+        }
+
+        #combo-input {
+            background: transparent;
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 10px 0;
+            outline: none;
+            cursor: pointer;
+            /* Makes it clear it's a button */
+        }
+
+        .arrow {
+            color: #888;
+            font-size: 10px;
+            transition: transform 0.3s;
+        }
+
+        /* Dropdown Menu */
+        .options-list {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            right: 0;
+            background: #1a1a1a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            list-style: none;
+            padding: 5px 0;
+            margin: 0;
+            display: none;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 100;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .options-list li {
+            padding: 12px 15px;
+            color: #ccc;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .options-list li:hover {
+            background: var(--hover-color);
+            color: white;
+        }
+
+        /* Active State */
+        .custom-combo.active .options-list {
+            display: block;
+        }
+
+        .custom-combo.active .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="custom-combo" id="combo-container">
+        <div class="input-wrapper">
+            <input type="text" id="combo-input" placeholder="Select an option..." readonly>
+            <span class="arrow">▼</span>
+        </div>
+        <ul class="options-list" id="list">
+            <li>Burger</li>
+            <li>Sandwich</li>
+            <li>Pastry</li>
+            <li>Rolls</li>
+            <li>Subway</li>
+            <li>Fruit Juice</li>
+        </ul>
+    </div>
+
+    <script>
+        const combo = document.getElementById('combo-container');
+        const input = document.getElementById('combo-input');
+        const list = document.getElementById('list');
+
+        // Toggle dropdown when clicking the box
+        combo.addEventListener('click', (e) => {
+            e.stopPropagation();
+            combo.classList.toggle('active');
+        });
+
+        // Select item and close
+        list.addEventListener('click', (e) => {
+            if (e.target.tagName === 'LI') {
+                input.value = e.target.textContent;
+                // You can also add custom logic here, like filtering the gallery!
+            }
+        });
+
+        // Close when clicking anywhere else on the screen
+        document.addEventListener('click', () => {
+            combo.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
