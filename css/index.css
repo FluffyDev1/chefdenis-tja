@@ -1222,6 +1222,7 @@ footer {
 .partners-grid-wrapper {
     overflow-x: hidden;
     display: flex;
+    border-radius: 10px;
     align-items: center;
     text-align: center;
 }
@@ -1229,6 +1230,9 @@ footer {
 .partners-grid {
     display: flex;
     width: max-content;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 16px;
     animation: scroll 25s linear infinite;
     align-items: center;
 }
@@ -1236,7 +1240,6 @@ footer {
 .partner-box {
     padding: 12px;
     width: 300px;
-    background-color: #333;
     color: white;
     display: flex;
     align-items: center;
