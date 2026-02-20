@@ -235,13 +235,19 @@ main {
     transform: translateY(-5px);
 }
 
-.feature-content h3 {
+.feature-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-title {
     font-size: 1.3rem;
+    color: #fff;
     margin-bottom: 5px;
     font-weight: 700;
 }
 
-.feature-content a {
+.feature-subtitle {
     color: #ddd;
     font-size: 0.95rem;
 }
