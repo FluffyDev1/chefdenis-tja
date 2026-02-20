@@ -46,7 +46,10 @@ header {
 .header-btns>a,
 .mobile-menu-overlay>a {
     color: #fff;
-    text-decoration: none;
+}
+
+.mobile-menu-overlay > a {
+    font-size: 24px;
 }
 
 .header-btns>a.active,
@@ -66,22 +69,24 @@ header {
 }
 
 .mobile-menu-overlay {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100vw;
+    right: -100vw;
+    width: calc(100vw / 2);
     height: 100vh;
     z-index: 999;
     background: #378838;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
     gap: 32px;
-    padding-top: 32px;
+    padding-top: 24px;
+    padding-right: 24px;
+    transition: all 250ms ease-in-out;
 }
 
 .mobile-menu-overlay.menu-open {
-    display: flex;
+    right: 0;
 }
 
 @media (max-width: 768px) {
@@ -107,11 +112,9 @@ header {
 }
 
 
-/* --- Hero Section --- */
 .hero-section {
-    /* Using a dark gradient + burger image placeholder */
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-        url('./hero.png');
+        url('../imagini/hero.png');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -124,7 +127,6 @@ header {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    /* Align text to right */
 }
 
 .hero-text {
@@ -159,7 +161,6 @@ header {
     font-weight: 600;
 }
 
-/* --- Why Section --- */
 .why-section {
     padding: 60px 0;
 }
@@ -191,7 +192,6 @@ header {
     margin: 0 auto;
 }
 
-/* --- Features Section --- */
 .features-section {
     padding: 40px 0;
 }
@@ -236,11 +236,9 @@ header {
 
 .feature-content a {
     color: #ddd;
-    text-decoration: none;
     font-size: 0.95rem;
 }
 
-/* --- Popular Section --- */
 .popular-section {
     padding: 60px 0 100px;
 }
@@ -346,7 +344,6 @@ footer {
 .footer-col a {
     display: block;
     color: white;
-    text-decoration: none;
     margin-bottom: 10px;
 }
 
@@ -364,9 +361,12 @@ footer {
 .contact-col .socials {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
-.contact-col .socials i {
+.contact-col .socials a {
+    width: max-content;
     margin-right: 15px;
     cursor: pointer;
 }
@@ -381,7 +381,6 @@ footer {
 
 .legal-links a {
     color: #e0e0e0;
-    text-decoration: none;
     margin-left: 20px;
 }
 
@@ -412,7 +411,6 @@ footer {
     font-size: 1.1rem;
 }
 
-/* Categories */
 .categories {
     display: flex;
     justify-content: center;
@@ -438,7 +436,6 @@ footer {
     background-color: #388E3C;
     color: white;
     transform: scale(1.1);
-    /* "font se mareste cand selectezi" effect */
 }
 
 .hint-text {
@@ -448,7 +445,6 @@ footer {
     font-style: italic;
 }
 
-/* Product Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -467,7 +463,6 @@ footer {
 
 .card:hover {
     transform: scale(1.03);
-    /* "optiune se mareste cand selectezi" effect */
     border: 1px solid #333;
 }
 
@@ -499,7 +494,6 @@ footer {
 }
 
 
-/* Offer Banner */
 .offer-section {
     padding: 50px 0;
 }
@@ -585,22 +579,20 @@ footer {
     position: relative;
     min-height: 300px;
     display: none;
-    /* Hidden on very small mobile, shown on desktop */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 890px) {
     .features-art {
         display: block;
     }
 }
 
 .art-text {
-    font-family: 'Oswald', sans-serif;
-    /* Condensed font style */
+    font-family: 'Amatic SC', sans-serif;
     position: absolute;
     color: transparent;
     -webkit-text-stroke: 1px white;
-    font-size: 4rem;
+    font-size: 6.25rem;
     letter-spacing: 2px;
 }
 
@@ -610,13 +602,13 @@ footer {
 }
 
 .t2 {
-    top: 80px;
-    right: 100px;
+    top: 100px;
+    right: 200px;
 }
 
 .t3 {
-    top: 180px;
-    right: 180px;
+    top: 200px;
+    right: 375px;
 }
 
 .page-hero {
@@ -648,7 +640,6 @@ footer {
     border-radius: 20px;
     width: 300px;
     text-align: center;
-    text-decoration: none;
     transition: transform 0.3s;
     border: 1px solid #333;
 }
@@ -689,7 +680,6 @@ footer {
     background-color: #262626;
     width: 100%;
     height: 400px;
-    /* Represents the big box */
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -699,7 +689,6 @@ footer {
     border: 1px solid #333;
 }
 
-/* --- CTA Banner --- */
 .cta-banner {
     padding: 60px 0;
 }
@@ -737,7 +726,6 @@ footer {
     background-color: #f0f0f0;
 }
 
-/* --- Reviews --- */
 .reviews-section {
     padding: 40px 0;
 }
@@ -750,7 +738,6 @@ footer {
 }
 
 .review-card {
-    text-decoration: none;
     background-color: #262626;
     padding: 20px;
     border-radius: 15px;
@@ -761,10 +748,8 @@ footer {
 }
 
 .stars {
-    color: #FFC107;
-    /* Gold color */
-    margin-bottom: 15px;
     font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
 .review-text {
@@ -814,7 +799,6 @@ footer {
     border: none;
     padding: 15px 20px;
     border-radius: 30px;
-    /* Pill shape for inputs */
     color: white;
     font-family: inherit;
     outline: none;
@@ -880,7 +864,6 @@ footer {
     line-height: 1.2;
 }
 
-/* Info Panel */
 .info-item {
     display: flex;
     align-items: center;
@@ -909,7 +892,6 @@ footer {
     color: var(--accent-green);
 }
 
-/* FAQ Panel */
 .faq-item {
     margin-bottom: 25px;
 }
@@ -1120,7 +1102,6 @@ footer {
     background-color: var(--accent-green);
 }
 
-/* Grid Layouts */
 .locations-grid-top {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -1140,14 +1121,12 @@ footer {
     gap: 30px;
 }
 
-/* Green Info Box */
 .info-green-box {
     background-color: var(--badge-green);
     border-radius: 25px;
     padding: 40px;
     text-align: center;
     flex-grow: 1;
-    /* Fills height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1263,7 +1242,6 @@ footer {
     }
 
     to {
-        /* Moves exactly half of the total width of the content */
         transform: translateX(-50%);
     }
 }
@@ -1273,7 +1251,6 @@ footer {
     width: 250px;
     font-family: sans-serif;
     user-select: none;
-    /* Prevents text highlighting on click */
 }
 
 .input-wrapper {
@@ -1299,7 +1276,6 @@ footer {
     padding: 10px 0;
     outline: none;
     cursor: pointer;
-    /* Makes it clear it's a button */
 }
 
 .arrow {
@@ -1308,7 +1284,6 @@ footer {
     transition: transform 0.3s;
 }
 
-/* Dropdown Menu */
 .options-list {
     position: absolute;
     top: calc(100% + 5px);
@@ -1339,7 +1314,6 @@ footer {
     color: white;
 }
 
-/* Active State */
 .custom-combo.active .options-list {
     display: block;
 }
@@ -1351,4 +1325,19 @@ footer {
 .menu-section > .container > .custom-combo {
     justify-self: center;
     margin-block: 32px;
+}
+
+#form-submit:not(.de-acord) {
+    background-color: rgba(55, 136, 56, 0.5);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+#form-submit.de-acord {
+    background-color: #378838;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.form-status {
+    color: #378838;
 }
