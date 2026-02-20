@@ -1245,9 +1245,14 @@ footer {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    margin-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     flex-shrink: 0;
-    border-radius: 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.partner-box:first-child {
+    border-left: none;
 }
 
 .partner-box img {
