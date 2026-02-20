@@ -26,7 +26,7 @@ header {
     padding: 6px 0;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 1100;
 }
 
 main {
@@ -87,7 +87,7 @@ main {
     right: -100vw;
     width: calc(100vw / 2);
     height: 100vh;
-    z-index: 1001;
+    z-index: 1200;
     background: #378838;
     align-items: flex-end;
     flex-direction: column;
