@@ -1253,10 +1253,10 @@ footer {
     width: auto;
 }
 
-/* .partners-grid:hover {
+.partners-grid:hover {
     animation-play-state: paused;
     cursor: pointer;
-} */
+}
 
 @keyframes scroll {
   0% {
