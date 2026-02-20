@@ -400,6 +400,7 @@ footer {
 .legal-links a {
     color: #e0e0e0;
     margin-left: 20px;
+    width: max-content;
 }
 
 
@@ -1184,7 +1185,7 @@ footer {
 .partners-desc {
     margin-bottom: 30px;
     color: #ddd;
-    max-width: 600px;
+    max-width: 450px;
 }
 
 @media (max-width: 768px) {
@@ -1228,6 +1229,7 @@ footer {
 .partners-grid {
     display: flex;
     gap: 2rem;
+    padding-left: 32px;
     animation: 15s scroll infinite linear;
     align-items: center;
 }
