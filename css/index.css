@@ -87,7 +87,7 @@ main {
     right: -100vw;
     width: calc(100vw / 2);
     height: 100vh;
-    z-index: 999;
+    z-index: 1001;
     background: #378838;
     align-items: flex-end;
     flex-direction: column;
