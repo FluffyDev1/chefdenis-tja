@@ -25,3 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 })
+
+
+function toggleTheme() {
+    document.documentElement.classList.toggle('light');
+    const isLight = document.documentElement.classList.contains('light');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+}
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme);
