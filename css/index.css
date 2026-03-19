@@ -1,9 +1,9 @@
 :root {
-    --primary-green: #388E3C;
+    --primary-green: #268736;
     --primary-green-hover: #2E7D32;
     --accent-green: #268736;
     --badge-green: #2E7D32;
-    --header-footer-bg: #227630;
+    --header-footer-bg: #17531c;
     --primary-green-faded: rgba(55, 136, 56, 0.5);
 
     --bg-body: #121212;
@@ -49,8 +49,8 @@
 }
 
 :root.light {
-    --accent-green: #28792A;
-    --header-footer-bg: #28792A;
+    --accent-green: #278736;
+    --header-footer-bg: #227630;
 
     --bg-body: #f4f4f4;
     --bg-card: #ffffff;
@@ -77,8 +77,6 @@
     --border-subtle: rgba(0, 0, 0, 0.06);
     --border-partner: rgba(0, 0, 0, 0.08);
 
-    --hero-overlay-start: rgba(255, 255, 255, 0.15);
-    --hero-overlay-end: rgba(255, 255, 255, 0.05);
     --hero-text-shadow: rgba(0, 0, 0, 0.4);
 
     --dot-inactive: #ccc;
@@ -185,6 +183,7 @@ header {
 
 main {
     margin-top: 68px;
+    margin-bottom: 50px;
 }
 
 .header-content {
@@ -240,13 +239,13 @@ main {
     position: fixed;
     top: 0;
     right: -100vw;
-    width: calc(100vw / 2);
+    width: calc(100vw / 1.67);
     height: 100vh;
     z-index: 1200;
     background: var(--header-footer-bg);
     align-items: flex-end;
     flex-direction: column;
-    gap: 32px;
+    gap: 48px;
     padding-top: 24px;
     padding-right: 24px;
     transition: all 250ms ease-in-out;
@@ -260,6 +259,10 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.container > h2 {
+    color: var(--text-primary);
 }
 
 .hero-section {
@@ -334,7 +337,7 @@ main {
 }
 
 .text-green {
-    color: var(--accent-green);
+    color: var(--accent-green) !important;
 }
 
 .why-card p {
@@ -803,7 +806,7 @@ footer {
 }
 
 .cta-banner {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 .cta-box {
@@ -940,7 +943,7 @@ footer {
 }
 
 .btn-green {
-    background-color: var(--primary-green);
+    background-color: var(--btn-white-bg);
     color: white;
     border: none;
     padding: 12px 40px;
@@ -960,6 +963,10 @@ footer {
     gap: 10px;
     color: var(--text-dim);
     font-size: 0.85rem;
+}
+
+.checkbox-wrapper label {
+    color: var(--text-primary);
 }
 
 .info-faq-section {
@@ -1158,6 +1165,7 @@ footer {
 }
 
 .loc-details h3 {
+    color: var(--text-primary);
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
@@ -1170,8 +1178,11 @@ footer {
 
 .hours {
     font-size: 0.85rem;
-    color: var(--text-muted);
     margin-bottom: 15px;
+}
+
+.hours p {
+    color: var(--text-primary);
 }
 
 .btn-map {
@@ -1395,13 +1406,13 @@ footer {
 }
 
 #form-submit.de-acord {
-    background-color: var(--header-footer-bg);
+    background-color: var(--primary-green);
     cursor: pointer;
     pointer-events: all;
 }
 
 .form-status {
-    color: var(--header-footer-bg);
+    color: var(--primary-green);
 }
 
 .leaflet-popup-content {
@@ -1450,7 +1461,7 @@ footer {
     }
 
     .cta-box {
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
 
     .social-cards {
@@ -1478,4 +1489,16 @@ footer {
     .map-placeholder {
         height: 300px;
     }
+}
+
+.prv-pol *,
+.terms *,
+.social-card > h3 > i::before,
+.address > i::before,
+.panel > h2,
+.card > h3,
+.feature-text > h4,
+.info-text > h4,
+.social-card > h3 {
+    color: var(--text-primary);
 }
