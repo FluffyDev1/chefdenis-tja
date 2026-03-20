@@ -1611,7 +1611,10 @@ footer {
 .custom-search svg {
     width: 24px;
     height: auto;
-    color: #fff;
+}
+
+.custom-search svg path {
+    stroke: var(--text-primary);
 }
 
 #search-produse {
