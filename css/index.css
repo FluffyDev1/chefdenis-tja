@@ -320,13 +320,13 @@ main {
 
 .why-card {
     background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 10px 10px 0px var(--shadow-card);
     border-radius: 30px;
     padding: 60px 40px;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    border: 1px solid var(--border-subtle);
-    box-shadow: 10px 10px 0px var(--shadow-card);
     transition: background-color 0.3s;
 }
 
@@ -751,13 +751,14 @@ footer {
 }
 
 .social-card {
-    background-color: var(--bg-card-alt);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 10px 10px 0px var(--shadow-card);
     padding: 40px 20px;
     border-radius: 20px;
     width: 300px;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s;
-    border: 1px solid var(--bg-border);
 }
 
 .social-card:hover {
@@ -1101,7 +1102,9 @@ footer {
 }
 
 .stat-card {
-    background-color: var(--badge-green);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 10px 10px 0px var(--shadow-card);
     padding: 30px;
     border-radius: 50px;
     text-align: center;
