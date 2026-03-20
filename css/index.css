@@ -77,8 +77,6 @@
     --border-subtle: rgba(0, 0, 0, 0.06);
     --border-partner: rgba(0, 0, 0, 0.08);
 
-    --hero-text-shadow: rgba(0, 0, 0, 0.4);
-
     --dot-inactive: #ccc;
     --dot-active: var(--primary-green);
     --art-stroke: var(--primary-green);
@@ -302,6 +300,14 @@ main {
 
 .hero-text h1 > span:nth-child(3) {
     color: #fff;
+}
+
+:root.light .hero-text h1 span {
+    color: #fff;
+}
+
+:root.light .hero-text h1 span:nth-child(3) {
+    color: var(--accent-green);
 }
 
 .hero-text p {
@@ -860,7 +866,7 @@ footer {
     background-color: var(--bg-card-alt);
     padding: 20px;
     border-radius: 15px;
-    border: 1px solid var(--bg-border);
+    box-shadow: 10px 10px 0px var(--shadow-card);
     display: flex;
     flex-direction: column;
     min-height: 180px;
@@ -895,7 +901,7 @@ footer {
     background-color: var(--bg-card-alt);
     padding: 40px;
     border-radius: 20px;
-    border: 1px solid var(--bg-border);
+    box-shadow: 10px 10px 0px var(--shadow-card);
     transition: background-color 0.3s;
 }
 
@@ -985,7 +991,7 @@ footer {
     background-color: var(--bg-card-alt);
     padding: 40px;
     border-radius: 30px;
-    border: 1px solid var(--bg-border);
+    box-shadow: 10px 10px 0px var(--shadow-card);
     transition: background-color 0.3s;
 }
 
@@ -1113,12 +1119,14 @@ footer {
 }
 
 .stat-card h3 {
+    color: var(--text-primary);
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 5px;
 }
 
 .stat-card p {
+    color: var(--text-primary);
     font-size: 1rem;
     line-height: 1.4;
 }
@@ -1151,7 +1159,7 @@ footer {
     display: flex;
     gap: 20px;
     position: relative;
-    border: 1px solid var(--bg-border);
+    box-shadow: 10px 10px 0px var(--shadow-card);
     transition: background-color 0.3s;
 }
 
@@ -1167,6 +1175,7 @@ footer {
     font-weight: 700;
     flex-shrink: 0;
 }
+
 
 .loc-details h3 {
     color: var(--text-primary);
@@ -1226,6 +1235,7 @@ footer {
 .info-green-box {
     background-color: var(--badge-green);
     border-radius: 25px;
+    box-shadow: 10px 10px 0px var(--shadow-card);
     padding: 40px;
     text-align: center;
     flex-grow: 1;
@@ -1333,7 +1343,6 @@ footer {
     display: flex;
     align-items: center;
     background: var(--bg-elevated);
-    border: 1px solid var(--bg-border);
     border-radius: 8px;
     padding: 5px 15px;
     cursor: pointer;
@@ -1347,6 +1356,8 @@ footer {
 #combo-input {
     background: transparent;
     border: none;
+    font-size: 16px;
+    font-weight: 500;
     color: var(--text-primary);
     width: 100%;
     padding: 10px 0;
@@ -1499,6 +1510,7 @@ footer {
 .terms *,
 .social-card > h3 > i::before,
 .address > i::before,
+.stat-card i::before,
 .panel > h2,
 .card > h3,
 .feature-text > h4,

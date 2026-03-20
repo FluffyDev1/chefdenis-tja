@@ -14,6 +14,10 @@ body, html {
     font-family: 'Outfit', sans-serif;
 }
 
+input {
+    font-family: 'Outfit', sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
