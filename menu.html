@@ -102,12 +102,11 @@
             </div>
         </section>
 
-        <section class="offer-section">
+        <section class="find-us-section">
             <div class="container">
-                <div class="offer-box">
-                    <h2>Ofertă nouă</h2>
-                    <p class="offer-main">Wrap de pui cu sos salsa + Orice Soda = 65 MDL</p>
-                    <p class="offer-sub">Valabil doar Sâmbătă și Duminică</p>
+                <div class="find-us-box">
+                    <h2>Ți-ai ales preferatele?</h2>
+                    <a class="btn-white" href="/contact.html#locatii">Vizitează-ne</a>
                 </div>
             </div>
         </section>
@@ -374,6 +373,7 @@
                 price: '25 MDL'
             }
         ];
+        let intv = 0;
 
         const combo = document.getElementById('combo-container');
         const input = document.getElementById('combo-input');
@@ -392,14 +392,23 @@
 
                 gallery.innerHTML = '';
                 let filtered = producte.filter(p => id == '-' ? true : p.type == id);
-                filtered.forEach(f => {
-                    gallery.innerHTML += `<div class="card">
-    <img src="${f.img}" class="card-img">
-    <h3>${f.name}</h3>
-    <p>${f.desc}</p>
-    <span class="price">${f.price}</span>
-</div>\n`;
-                })
+                let i = 0;
+                clearInterval(intv);
+                intv = setInterval(() => {
+                    let product = filtered[i];
+                    if(!product) return clearInterval(intv);
+                    const card = document.createElement('div');
+                    card.className = 'card menu-card';
+
+                    card.innerHTML = `
+                        <img src="${product.img}" class="card-img">
+                        <h3>${product.name}</h3>
+                        <p>${product.desc}</p>
+                        <span class="price">${product.price}</span>
+                    `;
+                    gallery.appendChild(card);
+                    i++;
+                }, id == '-' ? 100 : 200);
             }
         });
 
@@ -408,14 +417,23 @@
         });
 
         let gallery = document.querySelector('.product-grid');
-        producte.forEach(f => {
-                    gallery.innerHTML += `<div class="card">
-<img src="${f.img}" class="card-img">
-    <h3>${f.name}</h3>
-    <p>${f.desc}</p>
-    <span class="price">${f.price}</span>
-</div>\n`;
-        })
+        let i = 0;
+        clearInterval(intv);
+        intv = setInterval(() => {
+            let product = producte[i];
+            if(!product) return clearInterval(intv);
+            const card = document.createElement('div');
+            card.className = 'card menu-card';
+
+            card.innerHTML = `
+                <img src="${product.img}" class="card-img">
+                <h3>${product.name}</h3>
+                <p>${product.desc}</p>
+                <span class="price">${product.price}</span>
+            `;
+            gallery.appendChild(card);
+            i++;
+        }, 50);
     </script>
 </body>
 </html>
