@@ -594,11 +594,12 @@ footer {
 
 .card {
     background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 10px 10px 0px var(--shadow-card);
     padding: 20px;
     border-radius: 15px;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s;
-    box-shadow: 0 4px 6px var(--shadow-drop);
 }
 
 .card:hover {
