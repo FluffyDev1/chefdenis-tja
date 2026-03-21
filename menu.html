@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/globals.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script>
         (function () {
             const saved = localStorage.getItem('theme');
@@ -45,10 +48,26 @@
                     </svg>
                     0696 49 499
                 </a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Schimbă tema">
-                    <i class="fas fa-sun theme-icon-light"></i>
-                    <i class="fas fa-moon theme-icon-dark"></i>
-                </button>
+
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Schimbă tema">
+                        <i class="fas fa-sun theme-icon-light"></i>
+                        <i class="fas fa-moon theme-icon-dark"></i>
+                    </button>
+                    <div class="cart">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
             <div class="mobile-menu">
                 <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Schimbă tema">
@@ -70,8 +89,6 @@
     <div class="mobile-menu-overlay">
         <a class="close-menu">
             <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
                     <path
                         d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
@@ -81,16 +98,71 @@
         </a>
         <a href="/">Acasa</a>
         <a href="/despre-noi.html">Despre noi</a>
-        <a href="#" class="active">Meniu</a>
+        <a href="/menu.html" class="active">Meniu</a>
         <a href="/contact.html">Contacte</a>
         <a href="tel:+37369649499">
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M9.26334 12.3607C8.47286 11.2166 8.00262 9.83629 7.9056 9.71902C9.06334 8.91188 11.3276 7.8976 11.4544 6.44224C11.6157 4.56188 8.43 0.630929 7.81929 0.595215C6.14786 0.613072 3.08893 3.44164 2.72643 4.29641C2.05262 6.06367 2.38655 7.70831 3.54488 10.0893C5.01988 13.6309 10.4985 20.3494 13.6324 22.4583C15.7062 24.05 17.2211 24.675 19.03 24.2976C19.8711 24.1381 22.9086 21.6458 23.2127 19.9607C23.2871 19.3357 19.7562 15.1922 17.93 15.028C16.5121 14.897 15.1526 17.0196 14.1782 18.0571C14.0812 17.9333 13.2502 17.2851 12.3586 16.2589C11.1979 15.0393 10.1193 13.6065 9.26334 12.3607Z"
-                    fill="white" />
+                    fill="currentColor" />
             </svg>
             0696 49 499
         </a>
+        <div class="cart">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="cart-menu-overlay">
+        <a class="close-cart-menu">
+            <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                        fill="#fff"></path>
+                </g>
+            </svg>
+        </a>
+        <div id="producte-selectate">
+            <!-- amount, name, imagine -->
+
+        </div>
+        <div class="cart-info">
+            <span>Coșul tau este gol!</span>
+            <p>Pret: 0 MDL</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+            <input type="email" name="email" id="cart-email" placeholder="Unde va fi trimisă comanda">
+            <div class="custom-combo loc-combo" id="combo-container">
+                <div class="input-wrapper">
+                    <input type="text" class="cart-locatie" id="combo-input" placeholder="Select an option..." readonly
+                        value="Str. Basarabia 4">
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="options-list" id="loc-list">
+                    <li data-id="basarabia-4">Str. Basarabia 4</li>
+                    <li data-id="alexandru-cel-bun-84">Str. Alexandru Cel Bun 84</li>
+                    <li data-id="ion-pelivan-32-2">Str. Ion Pelivan 32/2</li>
+                    <li data-id="dacia-4">Str. Dacia 4</li>
+                    <li data-id="dacia-18">Str. Dacia 18</li>
+                </div>
+            </div>
+            <div class="cart-btns">
+                <a href="" class="btn-white" id="order-now">Comandă acum</a>
+                <button onclick="clearCart()" class="btn-white">Anulează comanda</button>
+                <span id="cart-success"></span>
+                <span id="cart-error"></span>
+            </div>
+        </div>
     </div>
 
     <main>
@@ -237,195 +309,16 @@
         </div>
     </footer>
 
-    <script src="./js/script.js" defer></script>
+    <script src="./js/script.js"></script>
     <script>
-
-        var producte = [
-            {
-                type: 'gustari',
-                img: './imagini/producte/cheeseburger-cu-pui.png',
-                name: 'Cheeseburger cu pui',
-                desc: 'Salată verde proaspătă, felii fine de cașcaval',
-                price: '55 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/bagheta.png',
-                name: 'Baghetă',
-                desc: 'Șuncă de curcan cu salată verde',
-                price: '35 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/crenvusti.png',
-                name: 'Crenvuști foietaj',
-                desc: 'Carne proaspătă, brânză cheddar',
-                price: '40 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/khachapuri.png',
-                name: 'Khachapuri  fierbinte',
-                desc: 'Brânză topită și cremoasă',
-                price: '45 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/ciabatta.png',
-                name: 'Ciabatta',
-                desc: 'Cereale și salami italian',
-                price: '35 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/wrap-de-pui-salsa.png',
-                name: 'Wrap de pui cu sos salsa',
-                desc: 'Pui crocant, legume proaspete, salsa',
-                price: '60 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/croissant.png',
-                name: 'Croissant cu ciocolată',
-                desc: 'Aluat foietaj cu zahăr umplut cu ciocolată.',
-                price: '30 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/salata-caesar.png',
-                name: 'Salată caesar',
-                desc: 'Pui fript, crutoane și parmezan.',
-                price: '50 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/bagheta-cu-rulada-pui.png',
-                name: 'Bagheta cu rulada de pui',
-                desc: 'Ruladă pui, roșii, salată verde',
-                price: '40 MDL'
-            },
-            {
-                type: 'gustari',
-                img: './imagini/producte/bagheta-cu-salam.png',
-                name: 'Bagheta cu salami, sos picant',
-                desc: 'Salam felii, sos ardei iute',
-                price: '40 MDL'
-            },
-            {
-                type: 'combo',
-                img: './imagini/producte/crenvusti-caf.png',
-                name: 'Crenvurști + Cafea',
-                desc: 'Crenvuști foietaj cu cafea la alegere.',
-                price: '60 MDL'
-            },
-            {
-                type: 'combo',
-                img: './imagini/producte/soda-croissant.png',
-                name: 'Soda + Croissant',
-                desc: 'Croissant cu ciocolată și băutură răcoritoare',
-                price: '45 MDL'
-            },
-            {
-                type: 'combo',
-                img: './imagini/producte/lamaie-sandwich.png',
-                name: 'Soda cu Lămâie + Sandwich',
-                desc: 'Sandwich cu mix de carne și cașcaval.',
-                price: '100 MDL'
-            },
-            {
-                type: 'combo',
-                img: './imagini/producte/capucc-toast.png',
-                name: 'Cappuccino + Toast cu Ricotta',
-                desc: 'Brânză ricotta cremoasă pe pâine',
-                price: '80 MDL'
-            },
-            {
-                type: 'combo',
-                img: './imagini/producte/croissant-cafea.png',
-                name: 'Croissant + Cafea',
-                desc: 'Croissant cu cafea',
-                price: '35 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/apa-dorna.png',
-                name: 'Apă Dorna',
-                desc: '',
-                price: '12 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/sprite.png',
-                name: 'Sprite',
-                desc: '',
-                price: '20 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/coca-cola.png',
-                name: 'Coca-Cola',
-                desc: '',
-                price: '20 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/fanta.png',
-                name: 'Fanta',
-                desc: '',
-                price: '20 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/limonada.png',
-                name: 'Limonadă',
-                desc: '',
-                price: '40 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/bautura.png',
-                name: 'Espresso / Americano',
-                desc: '',
-                price: '25 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/bautura.png',
-                name: 'Cappucino',
-                desc: '',
-                price: '27 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/bautura.png',
-                name: 'Latte',
-                desc: '',
-                price: '30 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/ceai.png',
-                name: 'Ceai în sortiment',
-                desc: '',
-                price: '20 MDL'
-            },
-            {
-                type: 'bauturi',
-                img: './imagini/producte/ciocolata-fierbinte.png',
-                name: 'Ciocolată fierbinte',
-                desc: '',
-                price: '25 MDL'
-            }
-        ];
         let intv = 0;
 
         const gallery = document.querySelector('.product-grid');
         const searchInput = document.getElementById('search-produse');
-        const inputs = document.querySelectorAll('#combo-container');
 
         let categoryInput = document.querySelector('.categ-combo').children[0].children[0];
         let priceSortInput = document.querySelector('.price-combo').children[0].children[0];
-
+        
         const priceList = document.getElementById('price-list');
         const categoryList = document.getElementById('list');
 
@@ -433,9 +326,6 @@
         let currentSort = 'ieftin-scump';
         let currentSearch = '';
 
-        function parsePrice(str) {
-            return parseFloat(str.replace(/\D/g, ''));
-        }
 
         function renderProducts() {
             let filtered = producte.filter(p => {
@@ -445,9 +335,9 @@
             });
 
             if (currentSort === 'ieftin-scump') {
-                filtered.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+                filtered.sort((a, b) => a.price - b.price);
             } else if (currentSort === 'scump-ieftin') {
-                filtered.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+                filtered.sort((a, b) => b.price - a.price);
             }
 
             gallery.innerHTML = '';
@@ -458,23 +348,21 @@
                 if (!product) return clearInterval(intv);
                 const card = document.createElement('div');
                 card.className = 'card menu-card';
+                card.id = `product-${product.id}`;
                 card.innerHTML = `
             <img src="${product.img}" class="card-img">
-            <h3>${product.name}</h3>
-            <p>${product.desc}</p>
-            <span class="price">${product.price}</span>
+                <h3>${product.name}</h3>
+                <p>${product.desc}</p>
+            <div>
+                <span class="price">${product.price} MDL</span>
+                <button id="product-add" class="btn-white" onclick="productClick(${product.id})">Comandă</button>
+            </div>
         `;
                 gallery.appendChild(card);
                 i++;
             }, 50);
         }
 
-        inputs.forEach(input => {
-            input.addEventListener('click', (e) => {
-                e.stopPropagation();
-                input.classList.toggle('active');
-            });
-        })
 
         categoryList.addEventListener('click', (e) => {
             if (e.target.tagName === 'LI') {
@@ -492,12 +380,34 @@
             }
         });
 
+        
+
         searchInput.addEventListener('input', (e) => {
             currentSearch = e.target.value.toLowerCase();
             renderProducts();
         });
 
         renderProducts();
+
+
+        function productClick(productId) {
+            let el = document.querySelector(`#product-${productId} #product-add`);
+            el.textContent = 'Adaugat!';
+            let product = producte.find(a => a.id == productId);
+            if(!product) return;
+            let selectat = producteSelectate.find(a => a.id == product.id);
+            if(selectat) {
+                selectat.amount++;
+            } else {
+                product.amount = 1;
+                producteSelectate.push(product);
+            }
+            localStorage.setItem('producte', JSON.stringify(producteSelectate));
+            updateCart(producteSelectate);
+            setTimeout(() => {
+                el.textContent = 'Comandă';
+            }, 1000);
+        }
     </script>
 </body>
 
